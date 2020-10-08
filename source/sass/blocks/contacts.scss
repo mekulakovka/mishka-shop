@@ -1,0 +1,37 @@
+.contacts {
+  padding: 38px 30px 40px;
+}
+
+.contacts__title {
+  font-size: 18px;
+  margin: 0 0 38px;
+}
+
+.contacts__desc {
+  color: $gray-color;
+}
+
+.contacts__desc-line {
+  margin: 0 0 35px;
+  display: flex;
+}
+
+.contacts__item {
+  margin: 0;
+  line-height: 30px;
+}
+
+.contacts__item--name {
+  min-width: 80px;
+}
+.contacts__item--value {
+  min-width: 180px;
+}
+
+.contacts__map {
+  margin: 0 -30px 40px;
+}
+
+.contacts__button {
+  width: 100%;
+}

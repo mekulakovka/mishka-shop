@@ -1,0 +1,27 @@
+.goods-types {
+    @include reset-list-style();
+}
+
+.goods-types__link {
+  display: block;
+  padding: 25px 150px 25px 27px;
+
+  color: $white-color;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+
+  &--interior {
+    background-color: $mint-color;
+  }
+  &--toys {
+    background-color: $bg-mint;
+  }
+
+  &:hover {
+    color: $white-color;
+  }
+  &:active {
+    color:$white-active;
+  }
+}

@@ -1,0 +1,33 @@
+.main-nav {
+  position: relative;
+
+  //padding: 0 0 20px 0;
+  margin: 20px 0 0 0;
+  border-top: 1px solid $light-gray-color;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: -60px;
+  right:30px;
+
+  width:30px;
+  height: 30px;
+}
+
+.main-nav__list {
+  @include reset-list-style();
+
+  font-weight: 700;
+  color: $black-color;
+  text-decoration: none;
+}
+
+.main-nav__link {
+  display: block;
+
+  padding: 27px 0 27px 75px;
+  border-bottom: 1px solid $light-gray-color;
+}
+
+

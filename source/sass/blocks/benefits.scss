@@ -1,0 +1,16 @@
+.benefits {
+  padding: 27px 30px;
+}
+
+.benefits__list {
+    @include reset-list-style();
+}
+
+.benefits__item {
+  display: block;
+  padding: 50px 0 27px 0;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+}

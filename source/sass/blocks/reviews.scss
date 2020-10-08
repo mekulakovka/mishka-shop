@@ -1,0 +1,36 @@
+.reviews {
+    padding:27px 30px 50px;
+
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-repeat: repeat-x;
+    background-position:bottom left;
+    background-size: auto 6px;
+}
+
+.reviews__slider {
+
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__text {
+  margin: 0 0 20px;
+  line-height: 30px;
+}
+
+.reviews__author-name {
+
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.reviews__insta-name {
+  display: block;
+
+  font-size: 17px;
+  line-height: 30px;
+}

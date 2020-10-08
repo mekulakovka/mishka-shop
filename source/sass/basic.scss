@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  font-family: $font-family;
+  color: $black-color;
+
+  background-color: $white-color;
+}
+
+a {
+  color: $black-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $black-hover;
+  }
+  &:active {
+    color: $black-active;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+picture img {
+  vertical-align: top;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
