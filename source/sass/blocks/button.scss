@@ -1,0 +1,26 @@
+.button {
+  display: block;
+  padding: 15px 0;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: $gray-color;
+  text-decoration: none;
+  //white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  background: $white-color;
+  border: 2px solid $gray-color;
+
+  &:hover {
+    color:$white-color;
+    background-color: $gray-color;
+  }
+  &:active {
+    color:$white-active;
+    background-color: $gray-color;
+  }
+}
