@@ -4,7 +4,9 @@
 @import "basic.scss";
 
 @import "blocks/button.scss";
+@import "blocks/page-h1.scss";
 @import "blocks/page-h2.scss";
+@import "blocks/page-h3.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/intro.scss";
@@ -17,5 +19,10 @@
 @import "blocks/footer-h3.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
+@import "blocks/page-main__header.scss";
+@import "blocks/catalog.scss";
+@import "blocks/good-item.scss";
+@import "blocks/production.scss";
+@import "blocks/order-form.scss";
 //@import "blocks/.scss";
 

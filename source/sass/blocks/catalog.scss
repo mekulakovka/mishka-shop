@@ -1,0 +1,8 @@
+.catalog {
+  margin: 30px;
+}
+
+.catalog__list {
+  @include reset-list-style();
+}
+
