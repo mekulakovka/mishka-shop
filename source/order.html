@@ -2,32 +2,33 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Магазин милых штучек ручной работы для дома "Мишка". Заказ товара.</title>
+    <title>Каталог - Магазин милых штучек ручной работы для дома "Мишка"</title>
   </head>
-  <body style="width:320px;">
+  <body>
 
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="90" height="40" alt="Магазин «Мишка»">
-      </a>
 
-      <nav class="main-nav">
+      <button class="page-header__toggle-menu button" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
-        <button class="main-nav__toggle button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="90" height="40" alt="Магазин «Мишка»">
+        </a>
 
-        <div class="main-nav__wrapper">
-
-          <ul class="main-nav__list site-list">
+        <nav class="main-nav">
+          <ul class="main-nav__list main-nav__list--site site-list">
             <li class="main-nav__item site-list__item ">
               <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="main-nav__item site-list__item">
-              <a class="main-nav__link" href="order.html">Вязание на заказ</a>
+              <a class="main-nav__link">Вязание на заказ</a>
             </li>
           </ul>
 
-          <ul class="main-nav__list user-list">
+          <ul class="main-nav__list main-nav__list--user user-list">
             <li class="main-nav__item user-list__item">
               <a class="main-nav__link user-list__search" href="#">Поиск по сайту</a>
             </li>
@@ -35,8 +36,8 @@
               <a class="main-nav__link user-list__cart" href="cart.html">Корзина: пока пуста</a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
     <main class="page-main">

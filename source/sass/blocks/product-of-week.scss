@@ -1,10 +1,16 @@
 .product-of-week {
-    padding:27px 30px 50px;
+  width: $mobile-content-width;
+  margin: 0 auto;
+  padding:27px 0 50px;
 
-    background-image: url(../img/bg-zigzag-line.svg);
-    background-repeat: repeat-x;
-    background-position:bottom left;
-    background-size: auto 6px;
+  background-image: url(../img/bg-zigzag-line.svg);
+  background-repeat: repeat-x;
+  background-position:bottom left;
+  background-size: auto 6px;
+}
+
+.product-of-week__header {
+  margin: 0 0 25px;
 }
 
 .product-of-week__title {
@@ -13,7 +19,6 @@
 
 .product-of-week__label {
   display: block;
-  margin: 0 0 25px;
 
   color: $mint-color;
   text-transform: uppercase;
@@ -24,19 +29,19 @@
 
 .product-of-week__desc {
   margin:0 0 27px 0;
+
+  color: $gray-color;
 }
 
 .product-of-week__details {
   margin-bottom: 27px;
+
+  color: $gray-color;
 }
 
 .product-of-week__img {
   display: block;
   margin:0 0 27px 0;
-
-  img {
-    vertical-align: top;
-  }
 }
 
 .product-of-week__price {
@@ -50,3 +55,88 @@
 .product-of-week__btn {
   width:100%;
 }
+
+@media (min-width: $tablet-width) {
+
+  .product-of-week {
+    width: $tablet-content-width;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product-of-week__header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+    width: 100%;
+    //margin: 0 0 55px;
+  }
+
+  .product-of-week__title {
+    width: 501px;
+  }
+
+  .product-of-week__label {
+    width: 100px;
+    text-align: center;
+  }
+
+  .product-of-week__body {
+    position: relative;
+    padding-right: 50%;
+  }
+
+  .product-of-week__img {
+    background-color: #ccc;//временно
+    position: absolute;
+    right: 0;
+    top: 5px;
+
+    width: 50%;
+
+    text-align: right;
+  }
+
+}//end tablet
+
+@media (min-width: $desktop-width) {
+
+  .product-of-week {
+    position: relative;
+
+    width: $desktop-content-width;
+    min-height: 775px; //высота абсолютно спозиц. эл-та плюс отступы
+    box-sizing: border-box;
+    padding: 70px 0 0 175px;
+  }
+
+  .product-of-week__header {
+    position: relative;
+    z-index: 2;
+  }
+
+  .product-of-week__title {
+    width: auto;
+  }
+
+  .product-of-week__label {
+    position: absolute;
+    left: -155px;
+    top: 60px;
+  }
+
+  .product-of-week__body {
+    position: static;
+
+    padding-right: 60%;
+  }
+
+  .product-of-week__img {
+    top: 70px;
+    min-height: 635px;
+
+    z-index: 1;
+  }
+
+}//end desktop

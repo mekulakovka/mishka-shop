@@ -3,3 +3,9 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin reset-button-style() {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

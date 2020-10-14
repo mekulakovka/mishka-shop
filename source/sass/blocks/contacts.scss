@@ -1,5 +1,10 @@
 .contacts {
-  padding: 38px 30px 40px;
+  padding: 38px 0 40px;
+}
+
+.contacts__wrapper {
+  width: $mobile-content-width;
+  margin: 0 auto;
 }
 
 .contacts__title {
@@ -29,9 +34,77 @@
 }
 
 .contacts__map {
-  margin: 0 -30px 40px;
+  margin: 0 0 40px;
 }
 
 .contacts__button {
-  width: 100%;
+  width: $mobile-content-width;
+  margin: 0 auto;
 }
+
+@media (min-width: $tablet-width) {
+
+  .contacts__wrapper {
+    width: $tablet-content-width;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+  }
+
+  .contacts__map {
+    background-color: #ccc; //временно
+  }
+
+  .contacts__button {
+    width: 230px;
+  }
+
+  .contacts__desc {
+    display: flex;
+  }
+
+  .contacts__desc-line {
+    width: 50%;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+
+  .contacts {
+    position: relative;
+    width: $desktop-content-width;
+    min-height: 530px; //высота карты + верхний отступ
+    margin: 0 auto;
+    padding: 70px 0 0 175px;
+    box-sizing: border-box;
+  }
+
+  .contacts__wrapper {
+    width:auto;
+    margin:0;
+    padding-right:60%;
+  }
+
+  .contacts__title {
+    font-size: 53px;
+  }
+
+  .contacts__desc {
+    flex-direction: column;
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 50%;
+  }
+
+  .contacts__button {
+    margin: 0;
+  }
+
+}
+

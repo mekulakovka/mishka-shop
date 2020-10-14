@@ -2,31 +2,33 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Каталог товаров. Магазин милых штучек ручной работы для дома "Мишка"</title>
+    <title>Каталог - Магазин милых штучек ручной работы для дома "Мишка"</title>
   </head>
-  <body style="width:320px;">
+  <body>
 
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="90" height="40" alt="Магазин «Мишка»">
-      </a>
-      <nav class="main-nav">
 
-        <button class="main-nav__toggle button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <button class="page-header__toggle-menu button" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
-        <div class="main-nav__wrapper">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-mobile.svg" width="90" height="40" alt="Магазин «Мишка»">
+        </a>
 
-          <ul class="main-nav__list site-list">
+        <nav class="main-nav">
+          <ul class="main-nav__list main-nav__list--site site-list">
             <li class="main-nav__item site-list__item ">
-              <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+              <a class="main-nav__link">Каталог товаров</a>
             </li>
             <li class="main-nav__item site-list__item">
               <a class="main-nav__link" href="order.html">Вязание на заказ</a>
             </li>
           </ul>
 
-          <ul class="main-nav__list user-list">
+          <ul class="main-nav__list main-nav__list--user user-list">
             <li class="main-nav__item user-list__item">
               <a class="main-nav__link user-list__search" href="#">Поиск по сайту</a>
             </li>
@@ -34,12 +36,12 @@
               <a class="main-nav__link user-list__cart" href="cart.html">Корзина: пока пуста</a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
-    <main class="page-main">
-      <header class="page-main__header page-main__header--catalog-header">
+    <main class="page-main page-catalog">
+      <header class="page-main__header">
         <h1 class="page-main__title page-h1">Каталог товаров</h1>
       </header>
 
@@ -54,7 +56,7 @@
               <p class="good-item__desc">Рост 30 см, вес 200 г</p>
               <footer class="good-item__footer">
                 <span class="good-item__price">1 200 руб.</span>
-                <button class="good-item__btn-buy">В корзину</button>
+                <button class="good-item__button-buy">В корзину</button>
               </footer>
             </div>
           </li>
@@ -67,7 +69,7 @@
               <p class="good-item__desc">Диаметр 15 см, высота 10 см</p>
               <footer class="good-item__footer">
                 <span class="good-item__price">690 руб.</span>
-                <button class="good-item__btn-buy">В корзину</button>
+                <button class="good-item__button-buy">В корзину</button>
               </footer>
             </div>
           </li>
@@ -80,7 +82,7 @@
               <p class="good-item__desc">Диаметр 30 см, высота 30 см</p>
               <footer class="good-item__footer">
                 <span class="good-item__price">1 500 руб.</span>
-                <button class="good-item__btn-buy">В корзину</button>
+                <button class="good-item__button-buy">В корзину</button>
               </footer>
             </div>
           </li>
@@ -92,50 +94,59 @@
         <div class="production__video-wrapper">
           <img src="img/video-mobile@1x.jpg" alt="Процесс производства" width="260" height="150">
         </div>
-        <p class="production__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="production__btn-order button" href="order.html">Сделать заказ</a>
+        <div class="production__details">
+          <p class="production__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="production__btn-order button" href="order.html">Сделать заказ</a>
+        </div>
       </section>
 
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__social social">
-        <h3 class="social__title footer-h3 visually-hidden">Социальные сети</h3>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
-              <svg class="page-footer__social-icon" width="22" height="21">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta"></use>
-              </svg>
-              Мы в Инстаграме
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
-              <svg class="page-footer__social-icon" width="15" height="28">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use>
-              </svg>
-              Мы в Фейсбуке
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-              <svg class="page-footer__social-icon" width="23" height="20">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
-              </svg>
-              Мы в Твиттере
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <b class="copyright__text footer-h3">Разработано</b>
-        <a class=" copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <svg class="page-footer__logo-academy" width="27" height="34">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
-          </svg>
-          HTML Academy
-        </a>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+            <svg width="102" height="34" style="background: #000;">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-footer"></use>
+            </svg>
+          </div>
+        <div class="page-footer__social social">
+          <h3 class="social__title footer-h3 visually-hidden">Социальные сети</h3>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">
+                <svg class="page-footer__social-icon" width="22" height="21">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-insta"></use>
+                </svg>
+                Мы в Инстаграме
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                <svg class="page-footer__social-icon" width="15" height="28">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use>
+                </svg>
+                Мы в Фейсбуке
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <svg class="page-footer__social-icon" width="23" height="20">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
+                </svg>
+                Мы в Твиттере
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text footer-h3">Разработано</b>
+          <a class=" copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <svg class="page-footer__logo-academy" width="27" height="34">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
+            </svg>
+            HTML Academy
+          </a>
+        </div>
       </div>
     </footer>
 

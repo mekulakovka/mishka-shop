@@ -1,8 +1,42 @@
 .catalog {
-  margin: 30px;
+  width: $mobile-content-width;
+  margin: 30px auto;
 }
 
 .catalog__list {
   @include reset-list-style();
 }
 
+@media (min-width: $tablet-width) {
+
+  .catalog {
+    width: $tablet-content-width;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__social {
+    padding: 0;
+    border: none;
+  }
+
+  .page-footer__copyright {
+    padding: 0;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+
+  .catalog {
+    width: $desktop-content-width;
+  }
+
+  .catalog__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}

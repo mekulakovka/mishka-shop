@@ -29,6 +29,46 @@
   font-weight: 700;
 }
 
-.good-item__btn-buy {
+.good-item__button-buy {
+  @include reset-button-style();
+
   margin: 0 0 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+
+  .good-item {
+    display: flex;
+    width: 100%;
+  }
+
+  .good-item__picture {
+    width:50%;
+    background-color: #ccc;//временно
+  }
+
+  .good-item__details {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+
+  .good-item {
+    width: 316px;
+    flex-direction: column;
+  }
+
+  .good-item__picture {
+    width:100%;
+    background-color: #ccc;//временно
+  }
+
+  .good-item__details {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
 }

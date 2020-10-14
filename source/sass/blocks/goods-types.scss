@@ -1,10 +1,13 @@
 .goods-types {
     @include reset-list-style();
+
+  width: $mobile-width;
+  margin: 0 auto;
 }
 
 .goods-types__link {
   display: block;
-  padding: 25px 150px 25px 27px;
+  padding: 25px 27px;
 
   color: $white-color;
   font-size: 19px;
@@ -25,3 +28,31 @@
     color:$white-active;
   }
 }
+
+.goods-types__name {
+  display: block;
+  width: 130px;
+}
+
+@media (min-width: $tablet-width) {
+
+  .goods-types {
+    width: $tablet-content-width;
+    display: flex;
+  }
+
+  .goods-types__item {
+    width: 50%;
+  }
+
+
+
+}//end tablet
+
+@media (min-width: $desktop-width) {
+
+  .goods-types {
+    width: $desktop-content-width;
+  }
+
+}//end desktop

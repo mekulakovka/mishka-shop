@@ -1,10 +1,60 @@
 .page-header {
+  position: relative;
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
   padding: 20px 0 0 0;
+
+  border-top: 1px solid $light-gray-color;
+
+  //стили для свёрнутого меню:
+  //padding-bottom: 20px;
+  //border-bottom: 1px solid $light-gray-color;
+}
+
+.page-header__toggle-menu {
+  position: absolute;
+  top: 20px;
+  right:30px;
+
+  width:30px;
+  height: 30px;
 }
 
 .page-header__logo {
-  display: block;
   width: 90px;
+  align-self: center;
+}
 
-  margin: 0 auto;
+
+@media (min-width: $tablet-width) {
+  .page-header__toggle-menu {
+    display: none;
+  }
+
+  .page-header__wrapper {
+    padding: 0;
+    border-top: none;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 20px;
+    left: $tablet-padding;
+  }
+
+}
+
+
+@media (min-width: $desktop-width) {
+
+  .page-header__logo {
+    top: 5px;
+    left:50%;
+    width: 164px;
+    margin-left: -82px;
+  }
+
 }

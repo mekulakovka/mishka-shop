@@ -1,5 +1,7 @@
 .benefits {
-  padding: 27px 30px;
+  width: $mobile-content-width;
+  margin: 0 auto;
+  padding: 27px 0;
 }
 
 .benefits__list {
@@ -13,4 +15,53 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
+}
+
+@media (min-width: $tablet-width) {
+
+  .benefits {
+    width: $tablet-content-width;
+  }
+
+  .benefits__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .benefits__item {
+    width: 50%;
+  }
+
+  .benefits__item-eco {
+    order: -6;
+  }
+
+  .benefits__item-price {
+    order: -4;
+  }
+
+  .benefits__item-like {
+    order: -2;
+  }
+
+  .benefits__item-love {
+    order: -5;
+  }
+
+  .benefits__item-native {
+    order: -3;
+  }
+
+  .benefits__item-giftpack {
+    order: -2;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+
+  .benefits {
+    width: 700px;
+  }
+
 }
