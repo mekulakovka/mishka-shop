@@ -1,7 +1,40 @@
 .order-form {
-  padding: 25px 30px 60px;
+  width: $mobile-content-width;
+  margin: 0 auto;
+  padding: 25px 0 60px;
 }
 
 .order-form__intro {
   margin: 0 0 27px;
+}
+
+.order-form__list {
+  @include reset-list-style();
+}
+
+@media (min-width: $tablet-width) {
+
+  .order-form {
+    width: $tablet-content-width;
+  }
+
+  .order-form__fieldset {
+    position: relative;
+    padding-left: 168px;
+  }
+
+  .order-form__legend {
+    position: absolute;
+    left: 0;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+
+  .order-form {
+    width: $desktop-content-width;
+  }
+
+
 }

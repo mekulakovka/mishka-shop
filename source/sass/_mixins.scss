@@ -3,3 +3,52 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin reset-button-style() {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin no-outline() {
+  outline: none;
+  background: transparent;
+
+  &::before {
+    display: none;
+  }
+}
+
+@mixin green-underline() {
+  display: inline-block;
+
+  border-bottom: 1px solid $mint-color;
+  text-decoration: none;
+
+  &:hover {
+    color:$mint-color;
+    text-decoration: none;
+  }
+}
+
+@mixin mobile-responsive() {
+  max-width: 767px;
+
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+}
+
+@mixin tablet-responsive() {
+  max-width: 1050px;
+
+  padding-left: $tablet-padding;
+  padding-right: $tablet-padding;
+}
+
+@mixin desktop-adaptive() {
+  width: 1050px;
+
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}

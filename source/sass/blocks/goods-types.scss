@@ -3,25 +3,91 @@
 }
 
 .goods-types__link {
+  position: relative;
+
   display: block;
-  padding: 25px 150px 25px 27px;
+  padding: 25px $mobile-padding;
 
   color: $white-color;
   font-size: 19px;
   line-height: 24px;
   font-weight: 700;
 
-  &--interior {
-    background-color: $mint-color;
-  }
-  &--toys {
-    background-color: $bg-mint;
-  }
+  transition: margin-top .4s ease, padding-bottom .4s ease;
 
   &:hover {
     color: $white-color;
+    margin-top: -5px;
+    padding-bottom: 42px;
   }
   &:active {
     color:$white-active;
   }
 }
+
+.goods-types__item--interior {
+  background-color: $mint-color;
+
+  .goods-types__link {
+    background-color: $mint-color;
+  }
+
+}
+.goods-types__item--toys {
+  background-color: $bg-mint;
+
+  .goods-types__link {
+    background-color: $bg-mint;
+  }
+}
+
+.goods-types__name {
+  display: block;
+  width: 130px;
+}
+
+.goods-types__link svg {
+  position: absolute;
+  right: $mobile-padding;
+  top: 23px;
+
+  opacity: 0.5;
+  fill: #149080;
+}
+
+.goods-types__link--toys svg{
+  //right: 34px;
+  right: $mobile-padding - 1%;
+}
+
+@media (min-width: $tablet-width) {
+
+  .goods-types {
+    display: flex;
+  }
+
+  .goods-types__item {
+    width: 50%;
+  }
+
+  .goods-types__link {
+    padding: 30px 37px 37px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .goods-types__link svg {
+    top: 30px;
+
+  }
+
+}//end tablet
+
+@media (min-width: $desktop-width) {
+
+  .goods-types {
+    width: $desktop-content-width;
+  }
+
+}//end desktop
