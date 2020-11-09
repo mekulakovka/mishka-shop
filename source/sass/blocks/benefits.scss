@@ -1,67 +1,118 @@
 .benefits {
-  width: $mobile-content-width;
-  margin: 0 auto;
-  padding: 27px 0;
+
+}
+
+.benefits__wrapper {
+  @include mobile-responsive();
+
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  background-image: url(../img/bg-zigzag-line.svg);
+  background-repeat: repeat-x;
+  background-position:bottom left;
+  background-size: auto 6px;
 }
 
 .benefits__list {
     @include reset-list-style();
+
+    max-width: 700px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+
 }
 
 .benefits__item {
+  position: relative;
+
+  width: 290px;
+
   display: block;
   padding: 50px 0 27px 0;
 
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    fill: $mint-color;
+  }
 }
 
 @media (min-width: $tablet-width) {
 
   .benefits {
-    width: $tablet-content-width;
+
   }
 
-  .benefits__list {
-    display: flex;
-    flex-wrap: wrap;
+  .benefits__wrapper {
+    @include tablet-responsive();
+
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    background-image: none;
   }
 
   .benefits__item {
     width: 50%;
+
+    box-sizing: border-box;
+    padding-top: 75px;
+
+    font-size: 20px;
+    line-height: 22px;
   }
 
-  .benefits__item-eco {
+  .benefits__item svg {
+    top: 20px;
+  }
+
+  .benefits__item--eco {
     order: -6;
+    padding-right: 90px;
   }
 
-  .benefits__item-price {
+  .benefits__item--price {
     order: -4;
+    padding-right: 90px;
   }
 
-  .benefits__item-like {
+  .benefits__item--like {
     order: -2;
+    padding-right: 90px;
   }
 
-  .benefits__item-love {
+  .benefits__item--love {
     order: -5;
   }
 
-  .benefits__item-native {
+  .benefits__item--native {
     order: -3;
   }
 
-  .benefits__item-giftpack {
+  .benefits__item--giftpack {
     order: -2;
   }
 
-}
+} //end tablet
 
 @media (min-width: $desktop-width) {
 
-  .benefits {
-    width: 700px;
+  .benefits__wrapper {
+
+    @include desktop-adaptive();
+
+    padding-top: 70px;
+    padding-left: 175px;
+    box-sizing: border-box;
   }
 
-}
+} //end desktop

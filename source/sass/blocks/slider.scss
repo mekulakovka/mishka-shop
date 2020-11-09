@@ -1,5 +1,5 @@
 .slider {
-
+  position: relative;
 }
 
 .slider__list {
@@ -8,6 +8,9 @@
 
 .slider__button-wrapper {
   display: flex;
+
+  width: 100%;
+  max-width: 260px;
   margin: 0 0 38px;
 
   border: 1px solid $light-gray-color;
@@ -15,32 +18,54 @@
 }
 
 .slider__button {
+  width:50%;
+  height: 53px;
+
+  box-sizing:border-box;
   padding: 15px 0;
 
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 700;
-  text-align: center;
-  color: $gray-color;
-  text-decoration: none;
-  //white-space: nowrap;
-  text-transform: uppercase;
+  font-size: 0;
   cursor: pointer;
 
-  background: $white-color;
+  background-color: $white-color;
+  background-position: center center;
+  background-repeat: no-repeat;
   border: none;
-  //border: 1px solid $light-gray-color;
 
   &:hover {
-    //color:$white-color;
     background-color: $white-color;
+    opacity: .6;
   }
   &:active {
-    //color:$white-active;
     background-color: $white-color;
+    opacity: .3;
   }
 
-  &:first-child {
+  &--left {
+    background-image: url(../img/icon-left-arrow.svg);
     border-right: 1px solid $light-gray-color;
   }
+  &--right {
+    background-image: url(../img/icon-right-arrow.svg);
+  }
+
 }
+
+@media (min-width: $tablet-width) {
+
+  .slider__button-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 200px;
+    margin: 0;
+
+    border: none;
+  }
+
+  .slider__button--left {
+    border: none;
+  }
+
+} //end desktop

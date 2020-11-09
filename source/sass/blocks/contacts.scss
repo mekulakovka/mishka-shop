@@ -1,10 +1,11 @@
 .contacts {
-  padding: 38px 0 40px;
+
 }
 
 .contacts__wrapper {
-  width: $mobile-content-width;
-  margin: 0 auto;
+  @include mobile-responsive();
+  padding-top: 38px;
+  padding-bottom: 40px;
 }
 
 .contacts__title {
@@ -34,7 +35,11 @@
 }
 
 .contacts__map {
-  margin: 0 0 40px;
+  margin: 0 -11% 40px;
+
+  .picture {
+    text-align: center;
+  }
 }
 
 .contacts__button {
@@ -42,22 +47,50 @@
   margin: 0 auto;
 }
 
+.contacts__e-mail-link {
+  @include green-underline();
+}
+
 @media (min-width: $tablet-width) {
 
   .contacts__wrapper {
-    width: $tablet-content-width;
+    @include tablet-responsive();
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 
   .contacts__title {
+    position: relative;
+    padding-right: 100px;
     font-size: 43px;
+    overflow: visible;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: 0;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url(../img/icon-flag.svg);
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .contacts__item {
+    font-size: 17px;
   }
 
   .contacts__map {
+    margin-bottom: 55px;
     background-color: #ccc; //временно
   }
 
   .contacts__button {
-    width: 230px;
+    width: 234px;
   }
 
   .contacts__desc {
@@ -68,43 +101,58 @@
     width: 50%;
   }
 
-}
+} //end tablet
 
 @media (min-width: $desktop-width) {
 
-  .contacts {
-    position: relative;
-    width: $desktop-content-width;
-    min-height: 530px; //высота карты + верхний отступ
-    margin: 0 auto;
-    padding: 70px 0 0 175px;
-    box-sizing: border-box;
-  }
-
   .contacts__wrapper {
-    width:auto;
-    margin:0;
-    padding-right:60%;
+    position: relative;
+
+    @include desktop-adaptive();
+
+    min-height: 635px; //высота карты + верхний отступ
+    padding-top: 70px;
+    padding-left: 175px;
+    padding-bottom: 105px;
+    box-sizing:border-box;
   }
 
   .contacts__title {
     font-size: 53px;
+    padding-right: 0;
+
+    &:after {
+      right: auto;
+      left: -100px;
+    }
   }
 
   .contacts__desc {
     flex-direction: column;
+
+    margin-bottom: 55px;
+  }
+
+  .contacts__desc-line {
+    width: 100%;
   }
 
   .contacts__map {
     position: absolute;
     top: 70px;
     right: 0;
-    width: 50%;
+
+    width: 525px;
+    height: 457px;
+
+    margin: 0;
+
+    overflow: hidden;
   }
 
   .contacts__button {
     margin: 0;
   }
 
-}
+} //end desktop
 

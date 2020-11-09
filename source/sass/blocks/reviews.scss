@@ -1,15 +1,14 @@
 .reviews {
   padding:27px 0 50px;
+}
+
+.reviews__wrapper {
+  @include mobile-responsive();
 
   background-image: url(../img/bg-zigzag-line.svg);
   background-repeat: repeat-x;
   background-position:bottom left;
   background-size: auto 6px;
-}
-
-.reviews__wrapper {
-  width: $mobile-content-width;
-  margin: 0 auto;
 }
 
 .reviews__item {
@@ -18,11 +17,16 @@
 
 .reviews__text {
   margin: 0 0 20px;
+
+  color: $gray-color;
   line-height: 30px;
 }
 
-.reviews__author-name {
+.reviews__cite {
+  display: block;
+}
 
+.reviews__author-name {
   font-weight: 700;
   font-style: normal;
   font-size: 17px;
@@ -36,40 +40,69 @@
   line-height: 30px;
 }
 
-@media (min-width: $tablet-width) {
-
-  .reviews__wrapper {
-    width: $tablet-content-width;
-    position: relative;
-  }
-
-  .reviews__button-wrapper {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 0;
-  }
-
-  .reviews__write-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
-
-}
-
-@media (min-width: $desktop-width) {
-
-.reviews {
-  width: $desktop-content-width;
-  margin: 0 auto;
-  padding: 70px 0 0 175px;
+.reviews__button-write {
+  max-width:260px;
   box-sizing: border-box;
 }
 
-.reviews__wrapper {
-    width: 100%;
-    margin: 0;
+@media (min-width: $tablet-width) {
+
+  .reviews {
+    padding: 0;
   }
 
-}
+  .reviews__wrapper {
+    @include tablet-responsive();
+    position: relative;
+
+    min-height: 377px;
+
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+    background-image: url(../img/bg-zigzag-line.svg), url(../img/review@1x.jpg);
+    background-position: bottom left, 0 0;
+    background-repeat: repeat-x, no-repeat;
+    background-size: auto 15px, auto;
+  }
+
+  .reviews__title {
+    padding-right: 250px;
+    margin-bottom: 62px;
+  }
+
+  .reviews__button-write {
+    position: absolute;
+    top: 80px;
+    right: $tablet-padding;
+  }
+
+  .reviews__cite {
+    padding-right: 250px;
+  }
+
+  .reviews__text {
+    font-size: 17px;
+  }
+
+  .reviews__author-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+} //end tablet
+
+@media (min-width: $desktop-width) {
+
+  .reviews__wrapper {
+    width: 875px;
+    margin: 0 auto;
+    min-height: 487px;
+
+    padding: 75px 0 0 175px;
+    margin: 0 auto;
+
+    background-size: auto, auto;
+  }
+
+} //end desktop

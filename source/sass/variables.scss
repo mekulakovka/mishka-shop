@@ -21,9 +21,11 @@ $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
-$mobile-padding: 30px;
-$tablet-padding: 50px;
-$desctop-padding: 100px;
+$mobile-width-only:767px;
+
+$mobile-padding: 9%;
+$tablet-padding: 6.5%;
+//$desctop-padding: 100px;
 
 $mobile-content-width:260px;
 $tablet-content-width: 668px;

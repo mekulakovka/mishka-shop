@@ -13,20 +13,7 @@
     width: $tablet-content-width;
   }
 
-  .page-footer__logo {
-    display: block;
-  }
-
-  .page-footer__social {
-    padding: 0;
-    border: none;
-  }
-
-  .page-footer__copyright {
-    padding: 0;
-  }
-
-}
+} //end tablet
 
 @media (min-width: $desktop-width) {
 
@@ -39,4 +26,4 @@
     justify-content: space-between;
   }
 
-}
+} //end desktop

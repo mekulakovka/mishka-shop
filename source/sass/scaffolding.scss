@@ -1,5 +1,5 @@
 body {
-  min-width: 320px;
+  min-width: 290px;
   margin: 0;
   padding: 0;
 
@@ -19,7 +19,8 @@ a {
   &:hover {
     color: $black-hover;
   }
-  &:active {
+  &:active,
+  &:focus {
     color: $black-active;
   }
 }
@@ -30,7 +31,7 @@ img {
   vertical-align: top;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
   width: 1px;

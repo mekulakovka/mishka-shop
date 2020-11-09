@@ -1,26 +1,13 @@
 .page-header {
   position: relative;
+  z-index: 1;
 }
 
 .page-header__wrapper {
   display: flex;
   flex-direction: column;
+
   padding: 20px 0 0 0;
-
-  border-top: 1px solid $light-gray-color;
-
-  //стили для свёрнутого меню:
-  //padding-bottom: 20px;
-  //border-bottom: 1px solid $light-gray-color;
-}
-
-.page-header__toggle-menu {
-  position: absolute;
-  top: 20px;
-  right:30px;
-
-  width:30px;
-  height: 30px;
 }
 
 .page-header__logo {
@@ -28,33 +15,66 @@
   align-self: center;
 }
 
+.page-header__logo img {
+  width: 90px;
+  height: 40px;
+}
+
 
 @media (min-width: $tablet-width) {
-  .page-header__toggle-menu {
-    display: none;
+
+  .page-header {
+    height: 90px;
+    overflow: visible;
+    border-bottom: 1px solid $light-gray-color;
   }
 
   .page-header__wrapper {
-    padding: 0;
-    border-top: none;
+    position: relative;
+
+    @include tablet-responsive();
+
+    padding-top: 0;
   }
 
   .page-header__logo {
     position: absolute;
     top: 20px;
     left: $tablet-padding;
+    z-index: 2;
+
+    &[href]:hover {
+      opacity: 0.6;
+    }
+
+    &[href]:active,
+    &[href]:focus {
+      opacity: 0.3;
+    }
   }
 
-}
+  .page-header__logo img{
+    width: 115px;
+    height: 53px;
+  }
+
+} //end tablet
 
 
 @media (min-width: $desktop-width) {
 
-  .page-header__logo {
-    top: 5px;
-    left:50%;
-    width: 164px;
-    margin-left: -82px;
+  .page-header__wrapper {
+    @include desktop-adaptive();
   }
 
-}
+  .page-header__logo {
+    top: 10px;
+    left:50%;
+  }
+
+  .page-header__logo img{
+    width: 164px;
+    height: 80px;
+  }
+
+} //end desktop
