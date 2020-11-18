@@ -3,10 +3,6 @@
   background-color: $bg-gray;
 }
 
-.page-footer__wrapper {
-
-}
-
 .page-footer__logo {
   display: none;
 }
@@ -34,6 +30,16 @@
   margin-left: 20px;
 }
 
+.copyright__link:hover svg path {
+  fill: $dark-mint-color;
+}
+
+.copyright__link:focus svg path,
+.copyright__link:active svg path {
+  opacity: 0.3;
+}
+
+
 @media (min-width: $tablet-width) {
 
   .page-footer {
@@ -51,6 +57,16 @@
   .page-footer__logo {
     display: block;
     padding-top: 5px;
+  }
+
+  .page-footer__logo a:hover svg path{
+    fill: $mint-color;
+  }
+
+  .page-footer__logo a:active svg path,
+  .page-footer__logo a:focus svg path{
+    fill: $mint-color;
+    opacity: 0.3;
   }
 
   .page-footer__social {

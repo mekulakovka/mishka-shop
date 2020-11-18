@@ -1,0 +1,52 @@
+.main-title {
+  background-color: $bg-gray;
+
+  margin-bottom: 30px;
+}
+
+.main-title__wrapper {
+  @include mobile-responsive();
+
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.main-title__h1 {
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+
+  .main-title {
+    margin-bottom: 80px;
+
+    background-image: url(../img/bg-zigzag-fill.svg);
+    background-repeat: repeat-x;
+    background-size: auto 23px;
+    background-position: bottom left;
+  }
+
+  .main-title__wrapper {
+    @include tablet-responsive();
+
+    padding-top: 95px;
+    padding-bottom: 70px;
+  }
+
+} //end tablet
+
+@media (min-width: $desktop-width) {
+
+  .main-title {
+    margin-bottom: 110px;
+
+    background-size: auto;
+  }
+
+  .main-title__wrapper {
+    @include desktop-adaptive();
+
+    padding-bottom: 80px;
+  }
+
+} //end desktop

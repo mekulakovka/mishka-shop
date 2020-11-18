@@ -1,7 +1,3 @@
-.product-of-week {
-
-}
-
 .product-of-week__wrapper {
   @include mobile-responsive();
 
@@ -80,10 +76,6 @@
 
 @media (min-width: $tablet-width) {
 
-  .product-of-week {
-
-  }
-
   .product-of-week__wrapper {
 
     @include tablet-responsive();
@@ -128,15 +120,16 @@
   }
 
   .product-of-week__img {
-    background-color: #ccc;//временно
-
     position: absolute;
     right: $tablet-padding;
     top: 100px;
 
+    margin: 0;
+  }
+
+  .product-of-week__img img {
     width: 333px;
     height: 404px;
-    margin: 0;
   }
 
   .product-of-week__desc {
@@ -222,14 +215,12 @@
     top: 0;
     right: 0;
 
-    width: 525px;
-    height: 636px;
-
     z-index: 1;
   }
 
-  .product-of-week__footer {
-
+  .product-of-week__img img {
+    width: 525px;
+    height: 636px;
   }
 
   .product-of-week__price {

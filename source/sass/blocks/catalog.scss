@@ -1,27 +1,26 @@
-.catalog {
-  width: $mobile-content-width;
-  margin: 30px auto;
-}
 
 .catalog__list {
   @include reset-list-style();
+  @include mobile-responsive();
+
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
 }
 
 @media (min-width: $tablet-width) {
 
-  .catalog {
-    width: $tablet-content-width;
+  .catalog__list {
+    @include tablet-responsive();
   }
 
 } //end tablet
 
 @media (min-width: $desktop-width) {
 
-  .catalog {
-    width: $desktop-content-width;
-  }
-
   .catalog__list {
+    @include desktop-adaptive();
+
     display: flex;
     justify-content: space-between;
   }

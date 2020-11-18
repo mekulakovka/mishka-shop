@@ -1,9 +1,12 @@
 .reviews {
-  padding:27px 0 50px;
+
 }
 
 .reviews__wrapper {
   @include mobile-responsive();
+
+  padding-top: 27px;
+  padding-bottom: 50px;
 
   background-image: url(../img/bg-zigzag-line.svg);
   background-repeat: repeat-x;
@@ -58,12 +61,17 @@
     min-height: 377px;
 
     padding-top: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 85px;
 
     background-image: url(../img/bg-zigzag-line.svg), url(../img/review@1x.jpg);
     background-position: bottom left, 0 0;
     background-repeat: repeat-x, no-repeat;
     background-size: auto 15px, auto;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url(../img/bg-zigzag-line.svg), url(../img/review@2x.jpg);
+      background-size: auto 15px, 350px 457px;
+    }
   }
 
   .reviews__title {
@@ -97,12 +105,12 @@
   .reviews__wrapper {
     width: 875px;
     margin: 0 auto;
-    min-height: 487px;
+    min-height: 400px;
 
-    padding: 75px 0 0 175px;
+    padding: 75px 0 90px 175px;
     margin: 0 auto;
 
-    background-size: auto, auto;
+    background-size: auto, 350px 457px;
   }
 
 } //end desktop

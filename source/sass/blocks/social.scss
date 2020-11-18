@@ -10,3 +10,13 @@
 .social__item {
   margin: 0 16px 0 20px;
 }
+
+.social__link:hover svg path{
+    fill: $mint-color;
+  }
+
+.social__link:active svg path,
+.social__link:focus svg path{
+  fill: $mint-color;
+  opacity: 0.3;
+}
