@@ -10,6 +10,7 @@ $dark-mint-color: #149080;
 
 $gray-color: #444444;
 $light-gray-color: #ececec;
+$icon-gray-color: #d3d2d2;
 
 $bg-mint: #56c3b2;
 $bg-gray: #f1f1f1;
@@ -25,8 +26,10 @@ $mobile-width-only:767px;
 
 $mobile-padding: 9%;
 $tablet-padding: 6.5%;
-//$desctop-padding: 100px;
 
-$mobile-content-width:260px;
-$tablet-content-width: 668px;
-$desktop-content-width: 1050px;
+$mobile-fix-width:260px;
+$tablet-fix-width: 668px;
+$desktop-fix-width: 1050px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

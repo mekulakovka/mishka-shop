@@ -4,3 +4,21 @@
     font-weight: 700;
     margin: 0 0 40px;
 }
+
+@media (min-width: $tablet-width) {
+
+  .page-h1 {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+} //end tablet
+
+@media (min-width: $desktop-width) {
+
+  .page-h1 {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+} //end desktop

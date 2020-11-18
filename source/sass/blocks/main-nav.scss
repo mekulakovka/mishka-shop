@@ -33,6 +33,7 @@
 
 .user-list__link {
   position: relative;
+
 }
 
 .user-list__link svg {
@@ -40,8 +41,22 @@
   left: 30px;
   top: 31px;
 
-  opacity: 0.2;
+  path {
+    fill: $icon-gray-color;
+  }
+
 }
+
+.user-list__link:hover  svg path{
+  fill: $mint-color;
+}
+
+.user-list__link:active  svg path,
+.user-list__link:focus  svg path{
+  fill: $mint-color;
+  opacity: 0.3;
+}
+
 
 @media (max-width: $mobile-width-only) {
 

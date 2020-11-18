@@ -1,6 +1,10 @@
 .good-item {
-  //display: flex;
+  width: 260px;
   margin-bottom: 30px;
+
+  &:hover {
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  }
 }
 
 .good-item__details {
@@ -33,23 +37,53 @@
   @include reset-button-style();
 
   margin: 0 0 0 auto;
+
+  svg path {
+    fill: $icon-gray-color;
+  }
 }
+
+.good-item__button-buy:hover  svg path{
+  fill: $mint-color;
+}
+
+.good-item__button-buy:active  svg path,
+.good-item__button-buy:focus  svg path{
+  fill: $mint-color;
+  opacity: 0.3;
+}
+
 
 @media (min-width: $tablet-width) {
 
   .good-item {
     display: flex;
     width: 100%;
+
+    margin-bottom: 55px;
   }
 
   .good-item__picture {
-    width:50%;
-    background-color: #ccc;//временно
+    display: block;
+    width: 334px;
+    flex-shrink:0;
+  }
+
+  .good-item__picture img{
+    width:334px;
+    height: 334px;
   }
 
   .good-item__details {
-    width: 50%;
+    flex-grow: 1;
     box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .good-item__footer {
+    margin-top: auto;
   }
 
 }
@@ -61,9 +95,9 @@
     flex-direction: column;
   }
 
-  .good-item__picture {
-    width:100%;
-    background-color: #ccc;//временно
+  .good-item__picture img{
+    width: 316px;
+    height: 462px;
   }
 
   .good-item__details {
