@@ -246,15 +246,16 @@ input[type="radio"].visually-hidden {
 .user-list__link svg {
   position: absolute;
   left: 30px;
-  top: 31px; }
-  .user-list__link svg path {
-    fill: #d3d2d2; }
+  top: 31px;
+  width: 18px;
+  height: 18px;
+  fill: #d3d2d2; }
 
-.user-list__link:hover svg path {
+.user-list__link:hover svg {
   fill: #63d1bb; }
 
-.user-list__link:active svg path,
-.user-list__link:focus svg path {
+.user-list__link:active svg,
+.user-list__link:focus svg {
   fill: #63d1bb;
   opacity: 0.3; }
 
@@ -627,10 +628,13 @@ input[type="radio"].visually-hidden {
   position: absolute;
   right: 9%;
   top: 23px;
+  width: 40px;
+  height: 60px;
   opacity: 0.5;
   fill: #149080; }
 
 .goods-types__link--toys svg {
+  width: 60px;
   right: 8%; }
 
 @media (min-width: 768px) {
@@ -926,6 +930,30 @@ input[type="radio"].visually-hidden {
     top: 0;
     left: 0;
     fill: #63d1bb; }
+
+.benefits__item--eco svg {
+  width: 32px;
+  height: 37px; }
+
+.benefits__item--price svg {
+  width: 47px;
+  height: 29px; }
+
+.benefits__item--like svg {
+  width: 33px;
+  height: 28px; }
+
+.benefits__item--love svg {
+  width: 34px;
+  height: 34px; }
+
+.benefits__item--native svg {
+  width: 54px;
+  height: 23px; }
+
+.benefits__item--giftpack svg {
+  width: 32.5px;
+  height: 32.5px; }
 
 @media (min-width: 768px) {
   .benefits__wrapper {
@@ -1275,13 +1303,15 @@ input[type="radio"].visually-hidden {
 
 .copyright__link svg {
   fill: #63d1bb;
-  margin-left: 20px; }
+  margin-left: 20px;
+  width: 34px;
+  height: 43px; }
 
-.copyright__link:hover svg path {
+.copyright__link:hover svg {
   fill: #149080; }
 
-.copyright__link:focus svg path,
-.copyright__link:active svg path {
+.copyright__link:focus svg,
+.copyright__link:active svg {
   opacity: 0.3; }
 
 @media (min-width: 768px) {
@@ -1303,10 +1333,13 @@ input[type="radio"].visually-hidden {
   .page-footer__logo {
     display: block;
     padding-top: 5px; }
-  .page-footer__logo a:hover svg path {
+    .page-footer__logo svg {
+      width: 102px;
+      height: 34px; }
+  .page-footer__logo a:hover svg {
     fill: #63d1bb; }
-  .page-footer__logo a:active svg path,
-  .page-footer__logo a:focus svg path {
+  .page-footer__logo a:active svg,
+  .page-footer__logo a:focus svg {
     fill: #63d1bb;
     opacity: 0.3; }
   .page-footer__social {
@@ -1343,11 +1376,23 @@ input[type="radio"].visually-hidden {
 .social__item {
   margin: 0 16px 0 20px; }
 
-.social__link:hover svg path {
+.social__link--instagram svg {
+  width: 22px;
+  height: 22px; }
+
+.social__link--facebook svg {
+  width: 15px;
+  height: 28px; }
+
+.social__link--twitter svg {
+  width: 25px;
+  height: 30px; }
+
+.social__link:hover svg {
   fill: #63d1bb; }
 
-.social__link:active svg path,
-.social__link:focus svg path {
+.social__link:active svg,
+.social__link:focus svg {
   fill: #63d1bb;
   opacity: 0.3; }
 

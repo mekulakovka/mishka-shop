@@ -28,14 +28,16 @@
 .copyright__link svg {
   fill: $mint-color;
   margin-left: 20px;
+  width: 34px;
+  height: 43px;
 }
 
-.copyright__link:hover svg path {
+.copyright__link:hover svg {
   fill: $dark-mint-color;
 }
 
-.copyright__link:focus svg path,
-.copyright__link:active svg path {
+.copyright__link:focus svg,
+.copyright__link:active svg {
   opacity: 0.3;
 }
 
@@ -57,14 +59,19 @@
   .page-footer__logo {
     display: block;
     padding-top: 5px;
+
+    svg {
+      width: 102px;
+      height: 34px;
+    }
   }
 
-  .page-footer__logo a:hover svg path{
+  .page-footer__logo a:hover svg {
     fill: $mint-color;
   }
 
-  .page-footer__logo a:active svg path,
-  .page-footer__logo a:focus svg path{
+  .page-footer__logo a:active svg,
+  .page-footer__logo a:focus svg{
     fill: $mint-color;
     opacity: 0.3;
   }
