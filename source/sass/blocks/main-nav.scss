@@ -41,18 +41,20 @@
   left: 30px;
   top: 31px;
 
-  path {
-    fill: $icon-gray-color;
-  }
+  width: 18px;
+  height: 18px;
+
+  fill: $icon-gray-color;
+
 
 }
 
-.user-list__link:hover  svg path{
+.user-list__link:hover  svg {
   fill: $mint-color;
 }
 
-.user-list__link:active  svg path,
-.user-list__link:focus  svg path{
+.user-list__link:active  svg,
+.user-list__link:focus  svg{
   fill: $mint-color;
   opacity: 0.3;
 }

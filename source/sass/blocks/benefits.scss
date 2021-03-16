@@ -46,11 +46,49 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-
-  .benefits {
-
+.benefits__item--eco {
+    svg {
+      width: 32px;
+      height: 37px;
+    }
   }
+
+.benefits__item--price {
+  svg {
+    width: 47px;
+    height: 29px;
+  }
+}
+
+.benefits__item--like {
+  svg {
+    width: 33px;
+    height: 28px;
+  }
+}
+
+.benefits__item--love {
+  svg {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.benefits__item--native {
+  svg {
+    width: 54px;
+    height: 23px;
+  }
+}
+
+.benefits__item--giftpack {
+  svg {
+    width: 32.5px;
+    height: 32.5px;
+  }
+}
+
+@media (min-width: $tablet-width) {
 
   .benefits__wrapper {
     @include tablet-responsive();
