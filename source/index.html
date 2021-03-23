@@ -226,7 +226,7 @@
           </picture>
           <footer class="product-of-week__footer">
             <p class="product-of-week__price">Цена: 990 руб.</p>
-            <button class="product-of-week__btn button">Заказать</button>
+            <button class="product-of-week__btn addtocart-button button">Заказать</button>
           </footer>
         </div>
       </article>
@@ -354,22 +354,36 @@
       </div>
     </footer>
 
-    <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
+    <section class="modal-overlay">
+      <div class="modal modal-addtocart">
+        <h2 class="modal-caption">Добавить в корзину</h2>
 
-      navMain.classList.remove('main-nav--nojs');
+          <form class="addtocart-form" action="https://echo.htmlacademy.ru" method="post">
 
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+          <p class="addtocart-label">Выберите размер:</p>
+          <ul class="addtocart-sizelist size-list">
+            <li class="size-item">
+              <input class="visually-hidden addtocart-input addtocart-input-radio" type="radio" name="size" value="S" id="sizeS" checked="checked">
+              <label for="sizeS">S</label>
+            </li>
+            <li class="size-item">
+              <input class="visually-hidden addtocart-input addtocart-input-radio" type="radio" name="size" value="M" id="sizeM">
+              <label for="sizeM">M</label>
+            </li>
+            <li class="size-item">
+              <input class="visually-hidden addtocart-input addtocart-input-radio" type="radio" name="size" value="L" id="sizeL">
+              <label for="sizeL">L</label>
+            </li>
+          </ul>
+          <p>
+            <button class="button-green" type="button">Добавить</button>
+          </p>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
+      </div>
+    </section>
 
+    <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript" src="js/mobile-menu.js"></script>
   </body>
 </html>
