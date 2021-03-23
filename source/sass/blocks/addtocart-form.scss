@@ -1,0 +1,79 @@
+.modal-addtocart {
+  width: 100%;
+  max-width: $mobile-width;
+  left:50%;
+  margin-left: -$mobile-width / 2;
+
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.addtocart-form {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.addtocart-label {
+  margin: 0 0 0 20px;
+
+  font-size: 15px;
+  text-align: center;
+}
+
+.size-list {
+  @include reset-list-style();
+}
+
+.button-green {
+  width: 100%;
+}
+
+.size-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addtocart-input-radio + label {
+  display: block;
+
+  padding: 15px 32px;
+  border: 2px solid $light-gray-color;
+
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: $gray-color;
+  cursor: pointer;
+}
+
+.addtocart-input-radio + label:hover {
+  border-color: #c7c7c7;
+}
+
+.addtocart-input-radio:checked + label {
+  border-color: $mint-color;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-addtocart {
+    width: 566px;
+    max-width: 100%;
+
+    margin-left: -283px;
+    padding: 50px 110px;
+  }
+
+  .addtocart-form {
+    width: 100%;
+  }
+
+  .addtocart-label {
+    margin-bottom: 25px;
+
+    font-size: 17px;
+  }
+
+  .addtocart-input-radio + label {
+    padding: 18px 47px;
+  }
+}
